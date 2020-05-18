@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-icon-button [routerLink]="['']"><mat-icon>arrow_left</mat-icon></button>
+        <span class="spacer"></span>
+        <span>{{gameData?.name}}</span>
+        <button mat-icon-button (click)="shareGame()" title="Invite your friends for a game"><mat-icon>share</mat-icon></button>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="showCopy()"><mat-icon>info</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div id="map">

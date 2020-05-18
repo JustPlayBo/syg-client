@@ -1,0 +1,28 @@
+{
+    "name": "Letters from Whitechapel",
+    "copy": {
+      "url": "http://www.sirchestercobblepot.com/whitehall-mystery-3/",
+      "bgg": "https://boardgamegeek.com/boardgame/59959/letters-whitechapel",
+      "text": "Letters from Whitechapel&copy; is a game by Gabriele Mari and Gianluca Santopietro produced by Sir Chester Cobblepot and distributed by Giochi Uniti and Fantasy Flight ",
+      "rules": "https://images-cdn.fantasyflightgames.com/filer_public/55/ff/55ff98ec-c39b-4607-9055-fadb150605dd/lfh_rules_letter_en_low_res.pdf"
+    },
+    "map":{
+        "file": "Whitechapel_Map.jpg",
+        "width": 1920,
+        "height": 1200
+    },
+    "players": 6,
+    "tokens":[
+        { "name":"Carriage", "file":"carriage.png", "width": 48, "height": 48, "amount": 3},
+        { "name":"Lamp", "file":"lamp.png", "width": 48, "height": 48, "amount": 2},
+        { "name":"Red", "file":"r.png", "width": 48, "height": 48, "amount": 5},
+        { "name":"Yellow", "file":"y.png", "width": 48, "height": 48, "amount": 19},
+        { "name":"Blue Player", "file":"p_b.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Green Player", "file":"p_g.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Orange Player", "file":"p_o.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Red Player", "file":"p_r.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Yellow Player", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"JackTurns", "file":"j_t.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"JackNight", "file":"j_n.png", "width": 48, "height": 48, "amount": 1}
+    ]
+}

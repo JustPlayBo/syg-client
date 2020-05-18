@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="spacer"></span>
+        <h1>JustPlay Bologna Game Platform</h1>
+        <span class="spacer"></span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div *ngIf="games" class="games">
+      <div class="game" *ngFor="let game of games">
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{game.name}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="/assets/imgs/games/{{game.file}}"
+            alt="box art">
+          <mat-card-content>
+            <p [innerHtml]="game.description"></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-flat-button color="accent" [routerLink]="[game.short, 'new']">New Game</button>
+          </mat-card-actions>
+        </mat-card>
+
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "name": "Whitehall Mystery",
+    "copy": {
+        "url": "http://www.sirchestercobblepot.com/whitehall-mystery-3/",
+        "bgg": "https://boardgamegeek.com/boardgame/190082/whitehall-mystery",
+        "text": "Whitehall Mistery&copy; is a game by Gabriele Mari and Gianluca Santopietro produced by Sir Chester Cobblepot and distributed by Giochi Uniti and Fantasy Flight ",
+        "rules": "https://images-cdn.fantasyflightgames.com/filer_public/78/b4/78b4b240-ec1d-416d-8486-970fb5a941c9/whitehall_mystery_rulebook_small_copy.pdf"
+    },
+    "map":{
+        "file": "Whitehall_Map.jpg",
+        "width": 1200,
+        "height": 1200
+    },
+    "players": 4,
+    "tokens":[
+        { "name":"Carriage", "file":"carriage.png", "width": 48, "height": 48, "amount": 2},
+        { "name":"Lamp", "file":"lamp.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Red", "file":"r.png", "width": 48, "height": 48, "amount": 4},
+        { "name":"Yellow", "file":"y.png", "width": 48, "height": 48, "amount": 15},
+        { "name":"Boat", "file":"tok.png", "width": 48, "height": 48, "amount": 2},
+        { "name":"BluePlayer", "file":"p_b.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"RedPlayer", "file":"p_r.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"YellowPlayer", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Jack", "file":"j_t.png", "width": 48, "height": 48, "amount": 1}
+    ]
+}

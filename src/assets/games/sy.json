@@ -1,0 +1,17 @@
+{
+    "name": "Scotland Yard",
+    "map":{
+        "file": "Whitehall_Map.jpg",
+        "width": 1200,
+        "height": 1200
+    },
+    "players": 6,
+    "tokens":[
+        { "name":"Blue Player", "file":"p_b.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Green Player", "file":"p_g.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Orange Player", "file":"p_o.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Red Player", "file":"p_r.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Yellow Player", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Mr. X", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
+    ]
+}
