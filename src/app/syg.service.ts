@@ -1,4 +1,4 @@
-import { SwellService } from './swell.service';
+import { SwellService } from './swell/swell.service';
 import { Injectable, EventEmitter } from '@angular/core';
 import { take, first } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';

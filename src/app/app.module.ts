@@ -1,3 +1,4 @@
+import { SwellModule } from './swell/swell.module';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -45,6 +46,7 @@ import { ShareComponent } from './share/share.component';
     MatGridListModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    SwellModule.forRoot({ defaultSwellDomain: 'swell.justplaybo.it'}),
 
   ],
   

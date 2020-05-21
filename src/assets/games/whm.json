@@ -14,7 +14,9 @@
     "players": 4,
     "tokens":[
         { "name":"Carriage", "file":"carriage.png", "width": 48, "height": 48, "amount": 2},
-        { "name":"Lamp", "file":"lamp.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Lamp", "file":"lamp.png", "width": 48, "height": 48, "amount": 2},
+        { "name":"Pointer", "file":"pointer.png", "width": 48, "height": 48, "amount": 15},
+        { "name":"Path", "file":"path.png", "width": 48, "height": 48, "amount": 15},
         { "name":"Red", "file":"r.png", "width": 48, "height": 48, "amount": 4},
         { "name":"Yellow", "file":"y.png", "width": 48, "height": 48, "amount": 15},
         { "name":"Boat", "file":"tok.png", "width": 48, "height": 48, "amount": 2},

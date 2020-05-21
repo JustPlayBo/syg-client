@@ -12,6 +12,8 @@
         { "name":"Orange Player", "file":"p_o.png", "width": 48, "height": 48, "amount": 1},
         { "name":"Red Player", "file":"p_r.png", "width": 48, "height": 48, "amount": 1},
         { "name":"Yellow Player", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
+        { "name":"Path", "file":"path.png", "width": 48, "height": 48, "amount": 15},
+        { "name":"Pointer", "file":"pointer.png", "width": 48, "height": 48, "amount": 15},
         { "name":"Mr. X", "file":"p_y.png", "width": 48, "height": 48, "amount": 1},
     ]
 }

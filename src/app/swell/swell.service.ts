@@ -1,7 +1,14 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, EventEmitter, Inject, InjectionToken } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SwellObject } from './models/swellobject';
 
+
+export interface SwellConfig {
+  defaultSwellDomain: string;
+}
+
+export const SwellConfigService = new InjectionToken<SwellConfig>('SwellConfig');
 
 declare let swell: any;
 
@@ -25,7 +32,14 @@ export class SwellService {
 
   auth: any;
 
-  constructor(private snackBar: MatSnackBar) {
+  loginEvents: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor(
+    private snackBar: MatSnackBar,
+    @Inject(SwellConfigService) private config: SwellConfig
+  ) {
+    this.defaultSwellDomain = config.defaultSwellDomain;
+
     this.updateSessionSubject();
 
     this.api.addConnectionHandler((status, err) => {
@@ -48,7 +62,6 @@ export class SwellService {
   }
 
   startSession() {
-
     return this.api.login(this.auth)
       .then(profile => {
         this.snackBar.open('Login success for ' + profile.id, 'Close', { duration: 3000 });
@@ -131,34 +144,51 @@ export class SwellService {
       }).catch(ex => { });
   }
 
-  createObject() {
-    return this.api.open({}).then(object => {
-      if (!object.node('state')) {
-        object.set('state', '_created_');
-        object.setPublic(true);
+  createObject(presence = true) {
+    return this.api.open({}).then(ob => {
+      if (!ob.node('state')) {
+        ob.set('state', '_created_');
+        ob.setPublic(true);
       }
-      this.snackBar.open('Object created: ' + object.id, 'Close', { duration: 3000 });
-      return object;
+
+      if (presence) {
+        this.enablePresence(ob);
+      }
+      this.snackBar.open('Object created: ' + ob.id, 'Close', { duration: 3000 });
+      return ob;
     }).catch(ex => { });
   }
 
-  getObject(objectId) {
+  getObject(objectId, presence= true) {
 
     this.snackBar.open(`getting game ${objectId}`);
     // TODO check id syntax
     return this.api.open({
       id: objectId
     })
-      .then(object => {
-        if (!object.node('state')) {
-          object.set('state', '_created_');
-          object.setPublic(true);
+      .then(ob => {
+        if (!ob.node('state')) {
+          ob.setPublic(true);
         }
-        this.snackBar.open('Object opened: ' + object.id, 'Close', { duration: 3000 });
-        return object;
+        
+        if (presence) {
+          this.enablePresence(ob);
+        }
+        this.snackBar.open('Object opened: ' + ob.id, 'Close', { duration: 3000 });
+        return ob;
       }).catch(ex => { });
   }
 
+
+  public enablePresence(object) {
+
+    object.setPresence(true);
+    object.setPresenceHandler((event) => {
+      console.log(event.session.id + ' is ' + event.type);
+    });
+
+    object.trackPresence(true);
+  }
 
   /**
    * Propagate session info

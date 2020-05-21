@@ -1,6 +1,5 @@
 import { ShareComponent } from './../share/share.component';
 import { SygService } from './../syg.service';
-import { SwellService } from './../swell.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
@@ -14,7 +13,6 @@ export class NewComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private swell: SwellService,
     private world: SygService,
     private router: Router,
     private dialog: MatDialog,
